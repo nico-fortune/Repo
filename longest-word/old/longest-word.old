@@ -1,0 +1,11 @@
+const output = require('../output.json');
+
+let count = {};
+output.forEach(element => {
+if(!(element.size in count) && element.size > 50) {
+    count[element.size] = 0; 
+} 
+count[element.size]++;
+});
+
+console.log(count);
