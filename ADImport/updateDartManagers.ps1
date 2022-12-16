@@ -5,15 +5,14 @@ Import-module ActiveDirectory
 $Users = Import-Csv -Path "C:\Temp\titles.csv"          
 
 foreach ($User in $Users) {
-
-    # $CurrentADUser = Get-ADUser -Filter "samaccountname -eq ${$User.SAM}" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com" -Properties Department, Name, GivenName, Surname, PostalCode, City, State, StreetAddress, Title, Manager
-    # TEST CASE
-    $CurrentADUser = Get-ADUser -Filter "samaccountname -eq ${$User.SAM}" -SearchBase "OU=Test Users,OU=Fortune Fish Users,DC=fortunefish,DC=com" -Properties Department, Name, GivenName, Surname, PostalCode, City, State, StreetAddress, Title, Manager
+    $SAM = $User.SAM
+    $CurrentADUser = Get-ADUser -Filter "SAMAccountName -like ${$User.SAM}" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com" -Properties Department, Name, GivenName, Surname, PostalCode, City, State, StreetAddress, Title, Manager
 
     if(-NOT $CurrentADUser) { 
-        Write-Host "${$User.Name} works in ${$User.Department} and was not found in AD"
+        Write-Host "$SAM was not found in AD"
         continue
     }
+    $CurrentADUser
     try {
         # If imported user object contains null references, swap with empty string
         if($User.Department.Length -lt 1) { $User.Department = "" }
@@ -25,18 +24,20 @@ foreach ($User in $Users) {
         if($User.State.Length -lt 1) { $User.State = "" }
         if($User.StreetAddress.Length -lt 1) { $User.StreetAddress = "" }
         if($User.Title.Length -lt 1) { $User.Title = "" }
-        if($User.ManagerSAM.Length -lt 1) { $User.ManagerSAM = "robz" }
+        if($User.ManagerSAM.Length -lt 1) {
+            Write-Host "Default manager for $SAM" 
+            $User.ManagerSAM = "robz"
+        }
         
         # Set them properties boi!
-        Set-ADUser -Identity $User.SAM -Department $User.Department -Name $User.Name -GivenName $User.GivenName -Surname $User.Surname -PostalCode $User.PostalCode -City $User.City -State $User.State -StreetAddress $User.StreetAddress -Title $User.Title 
+        Set-ADUser -Identity $User.SAM -Department $User.Department -PostalCode $User.PostalCode -City $User.City -State $User.State -StreetAddress $User.StreetAddress -Title $User.Title 
 
+        $ManagerSAM = $User.ManagerSAM
         # Search for manager and set them in
-        # if($User.ManagerSAM.Length -gt 1) { Set-ADUser -Identity $User.SAM -Manager ((Get-ADUser -Filter "samaccountname -eq ${$User.ManagerSAM}" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com").DistinguishedName) }
-        # TEST CASE
-        if($User.ManagerSAM.Length -gt 1) { Set-ADUser -Identity $User.SAM -Manager ((Get-ADUser -Filter "samaccountname -eq ${$User.ManagerSAM}" -SearchBase "OU=Test Users,OU=Fortune Fish Users,DC=fortunefish,DC=com").DistinguishedName) }
-
-        Write-Host "User ${$User.Name} updated sucessfully" -BackgroundColor Green -ForegroundColor Black
+        if($User.ManagerSAM.Length -gt 1) { Set-ADUser -Identity $User.SAM -Manager ((Get-ADUser -Filter "SAMAccountName -like '$ManagerSAM'" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com").DistinguishedName) }
+       
+        Write-Host "User $SAM updated sucessfully" -BackgroundColor Green -ForegroundColor Black
     } catch {
-        Write-Warning "User ${$User.Name} did not import correctly" -BackgroundColor Red
+        Write-Warning "User $SAM did not import correctly" -BackgroundColor Red
     }
 }
