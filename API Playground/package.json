@@ -1,0 +1,23 @@
+{
+  "name": "api-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nico Apostolopoulos",
+  "license": "ISC",
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^3.0.4",
+    "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "monday-sdk-js": "^0.1.6",
+    "node-fetch": "^3.3.0",
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "@microsoft/microsoft-graph-types": "^2.25.0"
+  }
+}
