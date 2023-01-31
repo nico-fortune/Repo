@@ -1,0 +1,105 @@
+Microsoft Exchange Security Groups     OU=Microsoft Exchange Security Groups,DC=fortunefish,DC=com                                    
+Domain Controllers                     OU=Domain Controllers,DC=fortunefish,DC=com                                                    
+Fortune Groups                         OU=Fortune Groups,DC=fortunefish,DC=com                                                        
+Fortune Share Calendars                OU=Fortune Share Calendars,DC=fortunefish,DC=com                                               
+Seasoft Production Users               OU=Seasoft Production Users,DC=fortunefish,DC=com                                              
+My Fax Users                           OU=My Fax Users,DC=fortunefish,DC=com                                                          
+Fortune Fish Users                     OU=Fortune Fish Users,DC=fortunefish,DC=com                                                    
+Fortune Chicago - 1068 - Bensenville   OU=Fortune Chicago - 1068 - Bensenville,OU=Fortune Fish Users,DC=fortunefish,DC=com            
+Handhelds                              OU=Handhelds,OU=Seasoft Production Users,DC=fortunefish,DC=com                                 
+Stations                               OU=Stations,OU=Seasoft Production Users,DC=fortunefish,DC=com                                  
+Fortune Distribution Groups            OU=Fortune Distribution Groups,DC=fortunefish,DC=com                                           
+Fortune Contacts                       OU=Fortune Contacts,DC=fortunefish,DC=com                                                      
+Fortune Minnesota - 2001 - Minneapolis OU=Fortune Minnesota - 2001 - Minneapolis,OU=Fortune Fish Users,DC=fortunefish,DC=com          
+Fortune Imports - 1068 - Bensenville   OU=Fortune Imports - 1068 - Bensenville,OU=Fortune Fish Users,DC=fortunefish,DC=com            
+Lobster Gram - 1070 - Bensenville      OU=Lobster Gram - 1070 - Bensenville,OU=Fortune Fish Users,DC=fortunefish,DC=com               
+Fortune Vendor Admins                  OU=Fortune Vendor Admins,OU=Fortune Fish Users,DC=fortunefish,DC=com                           
+Fortune Missouri - 10725 - St Louis    OU=Fortune Missouri - 10725 - St Louis,OU=Fortune Fish Users,DC=fortunefish,DC=com             
+Missouri                               OU=Missouri,OU=Fortune Distribution Groups,DC=fortunefish,DC=com                               
+Fortune Fish RDS Server                OU=Fortune Fish RDS Server,DC=fortunefish,DC=com                                               
+Minnesota                              OU=Minnesota,OU=Fortune Distribution Groups,DC=fortunefish,DC=com                              
+KC Drivers                             OU=KC Drivers,OU=Fortune Contacts,DC=fortunefish,DC=com                                        
+Minnesota Contacts                     OU=Minnesota Contacts,OU=Fortune Contacts,DC=fortunefish,DC=com                                
+Fortune Gulf - 5355 - Theodore         OU=Fortune Gulf - 5355 - Theodore,OU=Fortune Fish Users,DC=fortunefish,DC=com                  
+Out of Town Driver Emails              OU=Out of Town Driver Emails,OU=Fortune Contacts,DC=fortunefish,DC=com                         
+Wisconsin                              OU=Wisconsin,OU=Fortune Distribution Groups,DC=fortunefish,DC=com                              
+Fortune Wisconsin - 53598 - Windsor    OU=Fortune Wisconsin - 53598 - Windsor,OU=Fortune Fish Users,DC=fortunefish,DC=com             
+Disabled Computers                     OU=Disabled Computers,DC=fortunefish,DC=com                                                    
+Disabled Users                         OU=Disabled Users,DC=fortunefish,DC=com                                                        
+Wisconsin                              OU=Wisconsin,OU=Fortune Contacts,DC=fortunefish,DC=com                                         
+Fortune Fish Computers                 OU=Fortune Fish Computers,DC=fortunefish,DC=com                                                
+365 Licensing                          OU=365 Licensing,OU=Fortune Groups,DC=fortunefish,DC=com                                       
+Azure Security Groups                  OU=Azure Security Groups,OU=Fortune Groups,DC=fortunefish,DC=com                               
+Fortune Fish User Templates            OU=Fortune Fish User Templates,DC=fortunefish,DC=com                                           
+Laptops                                OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                                     
+Desktops                               OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                                    
+Seasoft Production Computers           OU=Seasoft Production Computers,OU=Fortune Fish Computers,DC=fortunefish,DC=com                
+1068 Bensenville                       OU=1068 Bensenville,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                
+1068 Bensenville                       OU=1068 Bensenville,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                 
+2330 Minneapolis                       OU=2330 Minneapolis,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                 
+2330 Minneapolis                       OU=2330 Minneapolis,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                
+1050 Bensenville                       OU=1050 Bensenville,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                
+1050 Bensenville                       OU=1050 Bensenville,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                 
+WebTitan DNS Filter Groups             OU=WebTitan DNS Filter Groups,OU=Fortune Groups,DC=fortunefish,DC=com                          
+Remote Sales Laptops                   OU=Remote Sales Laptops,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com             
+13050 Bayou La Batre                   OU=13050 Bayou La Batre,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com            
+8501 St. Louis                         OU=8501 St. Louis,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                   
+8501 St. Louis                         OU=8501 St. Louis,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                  
+4300 Kansas City                       OU=4300 Kansas City,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                 
+GPO Testing                            OU=GPO Testing,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                      
+Fortune Fish Admins                    OU=Fortune Fish Admins,DC=fortunefish,DC=com                                                   
+GPO Testing                            OU=GPO Testing,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                     
+Fortune Fish Server                    OU=Fortune Fish Server,DC=fortunefish,DC=com                                                   
+Mystery Unit                           OU=Mystery Unit,OU=Fortune Fish Computers,DC=fortunefish,DC=com                                
+Disabled Users with Mailboxes          OU=Disabled Users with Mailboxes,DC=fortunefish,DC=com                                         
+5355 Theodore                          OU=5355 Theodore,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                    
+Fortune Drivers                        OU=Fortune Drivers,OU=Fortune Fish Users,DC=fortunefish,DC=com                                 
+Fortune Wisconsin - 2210 - Green Bay   OU=Fortune Wisconsin - 2210 - Green Bay,OU=Fortune Fish Users,DC=fortunefish,DC=com            
+813 DeForest                           OU=813 DeForest,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                    
+4350 Windsor                           OU=4350 Windsor,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                     
+4350 Windsor                           OU=4350 Windsor,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                    
+813 DeForest                           OU=813 DeForest,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                     
+Shared Drive Security Groups           OU=Shared Drive Security Groups,OU=Fortune Groups,DC=fortunefish,DC=com                        
+Fortune Texas - 77029 - Houston        OU=Fortune Texas - 77029 - Houston,OU=Fortune Fish Users,DC=fortunefish,DC=com                 
+2210 Green Bay                         OU=2210 Green Bay,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                   
+8751 Houston                           OU=8751 Houston,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                     
+605 Delcambre                          OU=605 Delcambre,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                    
+Templates                              OU=Templates,OU=Fortune Fish Users,DC=fortunefish,DC=com                                       
+Autopilot Domain Join                  OU=Autopilot Domain Join,DC=fortunefish,DC=com                                                 
+Fortune Wisconsin - 813 - DeForest     OU=Fortune Wisconsin - 813 - DeForest,OU=Fortune Fish Users,DC=fortunefish,DC=com              
+Fortune Missouri - 4300 - Riverside    OU=Fortune Missouri - 4300 - Riverside,OU=Fortune Fish Users,DC=fortunefish,DC=com             
+Retail                                 OU=Retail,OU=Fortune Fish Users,DC=fortunefish,DC=com                                          
+Coastal Seafood - 2007 - Minneapolis   OU=Coastal Seafood - 2007 - Minneapolis,OU=Retail,OU=Fortune Fish Users,DC=fortunefish,DC=com  
+Coastal Seafood - 74 - St Paul         OU=Coastal Seafood - 74 - St Paul,OU=Retail,OU=Fortune Fish Users,DC=fortunefish,DC=com        
+Empire Fish - 11200 - Wauwatosa        OU=Empire Fish - 11200 - Wauwatosa,OU=Retail,OU=Fortune Fish Users,DC=fortunefish,DC=com       
+Fortune Wisconsin - 16150 - New Berlin OU=Fortune Wisconsin - 16150 - New Berlin,OU=Fortune Fish Users,DC=fortunefish,DC=com          
+Fortune Texas - 605 - Delcambre        OU=Fortune Texas - 605 - Delcambre,OU=Fortune Fish Users,DC=fortunefish,DC=com                 
+8751 Houston                           OU=8751 Houston,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                    
+Fortune Gulf - XXXX - Picayune         OU=Fortune Gulf - XXXX - Picayune,OU=Fortune Fish Users,DC=fortunefish,DC=com                  
+2210 Green Bay                         OU=2210 Green Bay,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                  
+ExtraTesting                           OU=ExtraTesting,OU=GPO Testing,OU=Laptops,OU=Fortune Fish Computers,DC=fortunefish,DC=com      
+5355 Theodore                          OU=5355 Theodore,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                   
+Test RDS Server for GPO                OU=Test RDS Server for GPO,OU=Fortune Fish RDS Server,DC=fortunefish,DC=com                    
+4300 Kansas City                       OU=4300 Kansas City,OU=Desktops,OU=Fortune Fish Computers,DC=fortunefish,DC=com                
+Fortune New Orleans- 921 - New Orleans OU=Fortune New Orleans- 921 - New Orleans,OU=Fortune Fish Users,DC=fortunefish,DC=com          
+New Orleans - NOFH                     OU=New Orleans - NOFH,OU=Fortune Distribution Groups,DC=fortunefish,DC=com                     
+Fortune Texas Dist Lists               OU=Fortune Texas Dist Lists,OU=Fortune Distribution Groups,DC=fortunefish,DC=com               
+Test OU                                OU=Test OU,OU=Disabled Users,DC=fortunefish,DC=com                                             
+D'Artagnan                             OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com                                      
+D'Artagnan - XXXX - Des Plaines        OU=D'Artagnan - XXXX - Des Plaines,OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com   
+D'Artagnan - XXX - Macon               OU=D'Artagnan - XXX - Macon,OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com          
+D'Artagnan - XXXX - Houston            OU=D'Artagnan - XXXX - Houston,OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com       
+D'Artagnan - XXX - Union               OU=D'Artagnan - XXX - Union,OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com          
+D'Artagnan Utility Accounts            OU=D'Artagnan Utility Accounts,OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com       
+Test Users                             OU=Test Users,OU=Fortune Fish Users,DC=fortunefish,DC=com                                      
+D'Artagnan - XXXX - Colorado           OU=D'Artagnan - XXXX - Colorado,OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com      
+D'Artangan - XXXX - North Carolina     OU=D'Artangan - XXXX - North Carolina,OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com
+Dartagnan                              OU=Dartagnan,OU=Fortune Distribution Groups,DC=fortunefish,DC=com                              
+Test Inside                            OU=Test Inside,OU=Test Users,OU=Fortune Fish Users,DC=fortunefish,DC=com                       
+UNION                                  OU=UNION,OU=Disabled Users,DC=fortunefish,DC=com                                               
+MACON                                  OU=MACON,OU=Disabled Users,DC=fortunefish,DC=com                                               
+DENVER                                 OU=DENVER,OU=Disabled Users,DC=fortunefish,DC=com                                              
+NORTH CAROLINA                         OU=NORTH CAROLINA,OU=Disabled Users,DC=fortunefish,DC=com                                      
+DES PLAINES                            OU=DES PLAINES,OU=Disabled Users,DC=fortunefish,DC=com                                         
+HOUSTON                                OU=HOUSTON,OU=Disabled Users,DC=fortunefish,DC=com                                             
+Dartagnan                              OU=Dartagnan,OU=Fortune Contacts,DC=fortunefish,DC=com
