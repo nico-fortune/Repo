@@ -1,5 +1,4 @@
-const logger = require('./Exportables/util.js'),
-    axios = require('axios'),
+const axios = require('axios'),
     samsara = require('api')('@samsara-dev-rel/v2019.01.01#fyom4jlahaar6d');
 require('dotenv').config();
 
@@ -12,7 +11,14 @@ let
     // Comma-separated list of vehicle IDs you want queried for stats
     vehicles = undefined,
     // Formatted vehicle stats with vehicle ID and odometer reading
-    stats = undefined;
+    stats = undefined,
+    data = process.env.EMAINT,
+    buff = new Buffer(data),
+    encoded = buff.toString('base64');
+const eMaint_Headers = {
+  'Content-Type': 'application/json',
+  'Authorization': encoded
+};
 
 
     // stats = [
@@ -90,20 +96,24 @@ async function getEmaintIds(vehicles) {
     body = `{
       "select": [
           {
-              "name": "c_vin"
+              "name": "serialNumber"
           }
       ],
-      "filter": {
-          "and": [
-              {
-                  "c_vin": "isDeleted"
-              }
-          ]
-      },
+      "filter": {},
+      "order": [
+          {
+              "name": "serialNumber",
+              "desc": true
+          }
+      ],
       "pageSize": 20,
       "page": 0,
       "fkExpansion": true
-    }`;
+  }`;
+
+  axios.post('https://fortunefishandgourmet/api/entities/def/Assets/search-paged',eMaint_Headers, {
+
+  });
 
   return ids;
 }
