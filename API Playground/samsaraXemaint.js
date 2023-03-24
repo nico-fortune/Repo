@@ -15,6 +15,7 @@ let
     data = process.env.EMAINT,
     buff = new Buffer(data),
     encoded = buff.toString('base64');
+    console.log(encoded);
 const eMaint_Headers = {
   'Content-Type': 'application/json',
   'Authorization': encoded
