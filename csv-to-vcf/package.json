@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
     "fs": "^0.0.1-security",
-    "vcards-js": "^2.10.0"
+    "vcards-js": "^2.10.0",
+    "vcf-parser": "^1.0.1"
   }
 }
