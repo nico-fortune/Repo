@@ -2,35 +2,31 @@
 Import-module ActiveDirectory
 
 #Imports the users from the CSV file into Active Directory.  Script to import users starts here. CSV MUST be in C temp path with this filename
-$Users = Import-Csv -Path "C:\Temp\titles.csv"          
+$Users = Import-Csv -Path "C:\Temp\sig-data.csv"          
 
 foreach ($User in $Users) {
-    $SAM = $User.SAM
     try {
-        $CurrentADUser = Get-ADUser -Filter "SAMAccountName -like $($User.SAM)" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com" -Properties Department, Name, GivenName, Surname, PostalCode, City, State, StreetAddress, Title, Manager
+        $CurrentADUser = Get-ADUser -Filter "SAMAccountName -like $($User.SAM)" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com"
         if(-NOT $CurrentADUser) { 
-            Write-Host "$SAM was not found in AD" -BackgroundColor Red -ForegroundColor Black
+            Write-Host "$($User.SAM) was not found in AD" -BackgroundColor Red -ForegroundColor Black
             continue
         }
     } catch { }
     
-    try {
-        $Default = $false;
-        # If imported user object contains null reference, swap with empty string
-        if($User.ManagerSAM.Length -lt 1) {
-            $Default = $true;
-            $User.ManagerSAM = "rzivkovic"
-        }
+    # try {
+
+        if($User.Department.Length -lt 1) { $User.Department = "" }
+        if($User.Title.Length -lt 1) { $User.Title = "" }
+        if($User.MobilePhone.Length -lt 1) { $User.MobilePhone = "" }
         
-        $ManagerSAM = $User.ManagerSAM
         # Search for manager and set them in
-        if($User.ManagerSAM.Length -gt 1) { Set-ADUser -Identity $User.SAM -Manager ((Get-ADUser -Filter "SAMAccountName -like '$ManagerSAM'" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com").DistinguishedName) }
+        if($User.ManagerSAM.Length -gt 1) { Set-ADUser -Identity $User.SAM -Manager ((Get-ADUser -Filter "SAMAccountName -like '$($User.ManagerSAM)'" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com").DistinguishedName) }
+
+        Set-ADUser -Identity $User.SAM -Replace @{title=$User.Title;mobile=$User.MobilePhone;department=$User.Department;}
        
-        if($Default) {
-            Write-Host "Default manager set for $SAM" -BackgroundColor Yellow -ForegroundColor Black
-        } else {
-            Write-Host "User $SAM updated sucessfully" -BackgroundColor Green -ForegroundColor Black
-        }
+        Write-Host "User $($User.SAM) updated sucessfully" -BackgroundColor Green -ForegroundColor Black
         
-    } catch { }
+    # } catch { 
+        # Swallow any errors, silently continue to next user
+    #  }
 }

@@ -1,0 +1,1 @@
+$AllUsers = Get-User -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com" -Properties * | export-csv -path c:\Temp\dart-folks-business-cards.csv

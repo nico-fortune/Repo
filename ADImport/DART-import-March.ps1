@@ -64,30 +64,31 @@ foreach ($User in $Users) {
     if($User.Title.Length -lt 1) { $User.Title = "" }
     if($User.SamAccountName.Length -lt 1) { $User.SamAccountName = "" }
     if($User.UserPrincipalName.Length -lt 1) { $User.UserPrincipalName = "" }
-    if($User.ManagerSAM.Length -lt 1) { $Manager = Get-ADUser -Filter "SAMAccountName -like 'rzivkovic'" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com".DistinguishedName } else { 
-        $Manager = Get-ADUser -Filter "SAMAccountName -like '$($User.ManagerSAM)'" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com".DistinguishedName
+    if($User.ManagerSAM.Length -lt 1) { $Manager = (Get-ADUser -Filter "SAMAccountName -like 'rzivkovic'").DistinguishedName } else { 
+        $Manager = (Get-ADUser -Filter "SAMAccountName -like '$($User.ManagerSAM)'").DistinguishedName
     }
 
     if (Get-ADUser -F {SamAccountName -eq $SAM}) {
         #If user does exist, update their fields
-        try {
+        # try {
             Write-Host "Updating user $SAM's data" -BackgroundColor Yellow -ForegroundColor Black
             Add-Content -path "C:\Temp\dart-import-log.txt" -value "Updating user $SAM's data"
             # User does not exist then proceed to create the new user account
 
-            Set-ADUser -Identity $User.SamAccountName -Replace @{postalCode=$User.PostalCode;streetAddress=$User.StreetAddress;st=$User.State;title=$User.Title;mail=$User.UserPrincipalName;mobile=$User.MobilePhone;department=$User.Department;l=$User.City;telephoneNumber=$User.OfficePhone;manager=(Get-ADUser -Filter "SAMAccountName -like '$ManagerSAM'" -SearchBase "OU=D'Artagnan,OU=Fortune Fish Users,DC=fortunefish,DC=com").DistinguishedName}
+            Set-ADUser -Identity $User.SamAccountName -Replace @{mail=$User.UserPrincipalName;}
             
             $ProxyAddresses = $User.ProxyAddresses
+            Set-ADUser -Identity $User.SamAccountName -clear ProxyAddresses
             foreach($ProxyAddress in $ProxyAddresses) {
                 Set-ADUser -Identity $User.SamAccountName -Add @{ProxyAddresses="$ProxyAddress"}
             }
             
             Write-Host "User $SAM overwritten sucessfully" -BackgroundColor Green -ForegroundColor Black
             Add-Content -path "C:\Temp\dart-import-log.txt" -value "User $SAM overwritten sucessfully"
-        } catch { 
-            Write-Warning "User $SAM did not overwrite correctly" -BackgroundColor Red
-            Add-Content -path "C:\Temp\dart-import-log.txt" -value "User $SAM did not overwrite correctly"
-        }
+        # } catch { 
+        #     Write-Warning "User $SAM did not overwrite correctly" -BackgroundColor Red
+        #     Add-Content -path "C:\Temp\dart-import-log.txt" -value "User $SAM did not overwrite correctly"
+        # }
     } else {       
         try {
             # User does not exist then proceed to create the new user account

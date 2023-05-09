@@ -1,0 +1,5 @@
+Write-ErrorMessage : Ex6F9304|Microsoft.Exchange.Configuration.Tasks.ManagementObjectNotFoundException|The operation couldn't be performed because object 'classadrivers@fortunefishco.net' 
+Write-ErrorMessage : Ex1472D1|Microsoft.Exchange.Configuration.ObjectModel.ProxyAddressExistsException|The proxy address "smtp:newaccount@dartagnan.com" is already being used by the proxy 
+Write-ErrorMessage : Ex6F9304|Microsoft.Exchange.Configuration.Tasks.ManagementObjectNotFoundException|The operation couldn't be performed because object 'acheft@fortunefish.onmicrosoft.com' 
+Write-ErrorMessage : Ex6F9304|Microsoft.Exchange.Configuration.Tasks.ManagementObjectNotFoundException|The operation couldn't be performed because object 'peter@fortunefish.onmicrosoft.com' 
+Write-ErrorMessage : Ex1472D1|Microsoft.Exchange.Configuration.ObjectModel.ProxyAddressExistsException|The proxy address "smtp:Ecommerce@dartagnan.com" is already being used by the proxy 

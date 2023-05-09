@@ -13,4 +13,4 @@ function capitalize(word) {
     return word.substring(0, 1).toUpperCase() + word.substring(1);
 }
 
-generatePasswords(3);
+generatePasswords(1);
